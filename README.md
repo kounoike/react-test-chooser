@@ -1,3 +1,15 @@
+# なんか要素リストの中から選択して１個拡大するヤツ
+
+普通にやると要素をどうにかしてコピーするとか、 `createPortal` で飛ばすことになるけど、なんだかんだで要素を再初期化することになったりする（＝stateが消える）。
+Reactのノードツリーから一旦分離して `document.createElement` したとこに `createPortal` ですっ飛ばしておいて、それを `appendChild` で必要に応じてつなぎなおしてるとこがポイント。
+これでstateをそのままにしたままあっちこっちに飛ばせる。
+
+
+https://kounoike.github.io/react-test-chooser/
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
